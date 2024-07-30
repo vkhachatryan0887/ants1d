@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSECTS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div id="container1">
+    <div id="checkers">
+      <div id="exersices" class="forms">
+        <p id="exnumtitle">ԽՆԴԻՐ №<span id="exnumber"></span></p>
+        <p id="payman"></p>
+      </div>
+      <div id="answers" class="forms">
+        <div id="answerbox" >
+          <label for="answer">Գրեք պատասխանը</label>
+          <input type="text" name="answer" id="answer" class="inspeed">
+        </div>
+        <div id="imageandcheck">
+        <button type="button" id="checkbutton">ՍՏՈՒԳԵԼ</button>
+        <div id="checkedform">
+        </div>
+        </div>
+        <div id="answercount" class="meet">
+          <label>Ճիշտ Պատասխանները</label>
+          <span id="anscount" class="outboxes">0</span>
+        </div>
+        <div id="nextbox">
+          <label>Հաջորդ Խնդիրը</label>
+          <button id="nextbutton" type="button">
+            
+          </button>
+        </div>
+      </div>
+      <div id="blueinbox">
+        <form class="forms" name="bluein" id="blueform" action="">
+          <p class="intitles">ԿԱՊՈՒՅՏ ԲԶԵԶ 
+            <img src="/image/blueleft.png" alt="">
+          </p>
+          <label for="bluespeed">Արագությունը</label> 
+          <input class="inspeed" type="number" id="bluespeed" name="bluespeed" value="0"> 
+          <label for="bluespeed">մմ/վ</label><br>
+          
+          <div class="start0box">
+            <label for="bstart" class="start0in">Սկզբնակետը</label>
+            <input type="number" name="bstart" class="inspeed" id="bstart" value="0" >
+          </div>
+          <div class="start0box" id="bluevazquxichoise">
+            <label for="bvazquxi">ՎԱԶՔՈՒՂԻ
+              <input type="radio" name="bvazquxichoise" id="bvazquxi" value="bluevazquxi" checked>
+            </label>
+            <label for="basfalt">ՃԱՆԱՊԱՐՀ
+              <input type="radio" name="bvazquxichoise" id="basfalt" value="blueasfalt">
+            </label>
+          </div>
+          <div id="bluechanging" class="start0box">
+            <label for="bchange">Շրջադարձ</label>
+            <input type="checkbox" name="bchange" id="bchange">
+          </div>
+                    
+        </form>
+      </div>
+      <div id="redinbox">
+        <form class="forms" name="redin" id="redform" action="">
+          <p class="intitles">ԿԱՐՄԻՐ ԲԶԵԶ 
+            <img src="/image/redleft.png" alt="">
+          </p>
+          <label for="redspeed">Արագությունը</label> 
+          <input class="inspeed" type="number" id="redspeed" name="redspeed" value="0">
+          <label for="redspeed">մմ/վ</label> <br>          
+          <div class="start0box">
+            <label for="rstart" class="start0in">Սկզբնակետը</label>
+            <input type="number" name="rstart" class="inspeed" id="rstart" value="0">
+          </div>
+          <div class="start0box" id="redvazquxichoise">
+            <label for="rvazquxi">ՎԱԶՔՈՒՂԻ
+              <input type="radio" name="rvazquxichoise" id="rvazquxi" value="redvazquxi" checked>
+            </label>
+            <label for="rasfalt">ՃԱՆԱՊԱՐՀ
+              <input type="radio" name="rvazquxichoise" id="rasfalt" value="redasfalt">
+            </label>
+          </div>
+          <div id="redchanging" class="start0box">
+            <label for="rchange">Շրջադարձ</label>
+            <input type="checkbox" name="rchange" id="rchange">
+          </div>
+          <div id="redlate" class="start0box">
+            <label for="rlate">Ուշացումով</label>
+            <input type="checkbox" name="rlate" id="rlate">
+            <input type="number" name="rlatenum" id="rlatenum" class="inspeed" value="0">
+          </div>
+        </form>
+      </div>
+      <div id="vazquxiinbox">
+        <form class="forms" name="vazquxi" id="vazquxiform" action="">
+          <p class="intitles">ՎԱԶՔՈՒՂԻ 
+            <img src="/image/tread.jpg" alt="վազքուղի">
+          </p>
+            <label for="vazquxispeed">Արագությունը</label> 
+            <input class="inspeed" type="number" id="vazquxispeed" name="vazquxispeed" value="0" > 
+            <label for="vazquxispeed">մմ/վ</label><br>            
+        </form>
+            
+      </div>
+      <div id="outs">
+        <form class="forms" name="outandtimer" id="outform" action="">
+          <div id="timer">
+            00:00
+          </div>
+          <div class="meet" id="relspeedbox">
+            <label >Հարաբերական արագությունը</label>
+           <span id="relspeed" class="outboxes"></span>
+          </div>
+          <div class="meet">
+            <label >Հանդիպման ժամանակը</label>
+          <span id="meettime" class="outboxes"></span>
+          </div>
+          <div class="meet">
+            <label >Հանդիպման կոորդինատը</label>
+          <span id="meetplace" class="outboxes"></span>
+          </div>
+          
+        </form>
+      </div>
+      
+    </div>
+    <div id="buttons">
+      <button type="button" class="menubuttons" id="start">ՍԿՍԵԼ</button>
+      <button type="button" class="menubuttons" id="exersicesb">ԽՆԴԻՐՆԵՐ</button>
+      <button type="button" class="menubuttons" id="exersicesrb">ԽՆԴԻՐՆԵՐ</button>
+      <button type="button" class="menubuttons" id="startb">Սկսել Փորձը</button>
+      <input type="range" name="animationrange" id="animationrange" min="0" max="100" value="0">
+      <div  id="timecheckbox">Անվերջ Փորձ</div>
+      <button type="button" class="menubuttons" id="changeb" >Վերադարձ</button>
+      <label for="lines" id="lineslabel"><b>ՉԱՓԱԳԾԵՐ</b><input type="checkbox" name="lines" id="lines" checked></label>
+    </div>
+  </div>
+  <div id="container2">
+    <div id="speedroad">
+      <div id="road">
+        <div id="treadmill">
+          <div id=tread1 class="tread">
+          </div>
+          <div id=tread2 class="tread">
+          </div>
+          <div id=tread3 class="tread">
+          </div>
+        </div>
+        <div id="blue">
+          <div id="bstart0">0</div>
+        </div>
+        <div id="red">
+          <div id="rstart0">0</div>
+        </div>
+      </div>
+      <div id="ruler">
+      </div>
+    </div>
+  </div>
+  <script src="/css/script.js"></script>
+</body>
+</html>
